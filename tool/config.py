@@ -3,7 +3,7 @@ from os.path import abspath
 class Config(object):
     def __init__(self,fileName):
         self.config = {}
-        self.readConfiguration(fileName)
+        self.readConfiguration(fileName);
 
     def __getitem__(self, item):
         if not self.contains(item):

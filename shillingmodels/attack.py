@@ -48,9 +48,9 @@ class Attack(object):
 
 
     def selectTarget(self,):
-        print 'Selecting target items...'
-        print '-'*80
-        print 'Target item       Average rating of the item'
+        print ('Selecting target items...');
+        print ('-'*80);
+        print ('Target item       Average rating of the item');
         itemList = self.itemProfile.keys()
         itemList.sort()
         while len(self.targetItems) < self.targetCount:
@@ -67,7 +67,7 @@ class Attack(object):
         sigma = int(0.1*mu)
         markedItemsCount = abs(int(round(random.gauss(mu, sigma))))
         markedItems = random.sample(range(len(self.itemProfile)), markedItemsCount)
-        return markedItems.tolist()
+        return markedItems
 
     def insertSpam(self,startID=0):
         pass

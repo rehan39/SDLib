@@ -52,6 +52,11 @@ class BandWagonAttack(Attack):
         mu = int(self.selectedSize * len(self.itemProfile))
         sigma = int(0.1 * mu)
         markedItemsCount = abs(int(round(random.gauss(mu, sigma))))
-        markedIndexes = random.sample(range(len(self.hotItems)), markedItemsCount)
+#        markedIndexes = random.sample(range(len(self.hotItems)), markedItemsCount)
+        markedIndexes = random.sample(range(len(self.hotItems)),  max(markedItemsCount, len(self.hotItems)))
+
+
+
+
         markedItems = [self.hotItems[index][0] for index in markedIndexes]
         return markedItems

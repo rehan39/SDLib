@@ -13,7 +13,7 @@ class AverageAttack(Attack):
 
 
     def insertSpam(self,startID=0):
-        print 'Modeling average attack...'
+        print ('Modeling average attack...');
         itemList = self.itemProfile.keys()
         if startID == 0:
             self.startUserID = len(self.userProfile)
